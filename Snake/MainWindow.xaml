@@ -5,21 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SnakeGame"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" Topmost="True" WindowState="Maximized">
+        Title="MainWindow" Height="350" Width="525">
+    
     <Grid>
         <Grid.Background>
             <RadialGradientBrush>
-                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="Black" Offset="{Binding Path=Offset,UpdateSourceTrigger=PropertyChanged}"/>
                 <GradientStop Color="#FFC78C8C" Offset="0.298"/>
             </RadialGradientBrush>
         </Grid.Background>
         <Grid x:Name="Lars" Margin="0,0,2,0" Opacity="0.5">
             <Grid.Background>
                 <RadialGradientBrush>
-                    <GradientStop Color="#FFF90F0F" Offset="{Binding Path=Offset,UpdateSourceTrigger=PropertyChanged}"/>
+                    <GradientStop Color="#FFF90F0F" Offset="{Binding Offset,UpdateSourceTrigger=PropertyChanged}"/>
                     <GradientStop Color="#FF0031D6" Offset="0.804"/>
                 </RadialGradientBrush>
             </Grid.Background>
+            <TextBlock x:Name="textBlock" Height="25.362" Margin="199.913,131.261,210.594,0" TextWrapping="Wrap" Text="{Binding OffSet, Mode=TwoWay}" VerticalAlignment="Top" Background="White"/>
         </Grid>
 
     </Grid>

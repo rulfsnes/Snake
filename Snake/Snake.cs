@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace SnakeGame
 {
-    class Position
-    {
-        public int X;
-        public int Y;
-    }
+
 
     class Snake{
         private bool Alive;
