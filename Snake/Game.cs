@@ -12,7 +12,7 @@ namespace SnakeGame
         public int Y;
     }
 
-    class Game
+    class Game : BaseView
     {
 
         private int maxWidth;
@@ -25,23 +25,38 @@ namespace SnakeGame
         }
         public bool checkBounds(Position position)
         {
-            if((position.Y > this.maxHeight) || (position.Y < this.minHeight))
+            if ((position.Y > this.maxHeight) || (position.Y < this.minHeight))
             {
                 return false;
             }
-            else if((position.X > this.maxWidth) || (position.X < this.minWidth))
+            else if ((position.X > this.maxWidth) || (position.X < this.minWidth))
             {
                 return false;
             }
             else
             {
-                return true;  
+                return true;
             }
 
         }
 
         private bool Increment;
-        public double Offset { get; set; }
+        private double _offset;
+        public double Offset
+        {
+            get
+            {
+                return _offset;
+            }
+            set
+            {
+                if(_offset != value)
+                {
+                    _offset = value;
+                    InvokePropertyChanged("Offset");
+                }
+            }
+        }
 
         public void updateBackground()
         {

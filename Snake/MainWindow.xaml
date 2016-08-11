@@ -21,7 +21,6 @@
                     <GradientStop Color="#FF0031D6" Offset="0.804"/>
                 </RadialGradientBrush>
             </Grid.Background>
-            <TextBlock x:Name="textBlock" Height="25.362" Margin="199.913,131.261,210.594,0" TextWrapping="Wrap" Text="{Binding OffSet, Mode=TwoWay}" VerticalAlignment="Top" Background="White"/>
         </Grid>
 
     </Grid>
